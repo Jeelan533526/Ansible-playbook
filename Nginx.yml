@@ -1,0 +1,16 @@
+---
+  - name: Install Nginx
+    hosts: clints
+    tasks: 
+
+      - name: Run apt update
+        command: apt update
+
+      - name: Run Install Nginx
+        shell: apt install nginx -y
+
+      - name: Start Nginx service
+        shell: service nginx start
+
+      - name: Stop Nginx service
+        shell: service nginx stop
